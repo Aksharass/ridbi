@@ -1,0 +1,215 @@
+/* ================================
+   CONTACT SECTION (Dual Panels with Testimonial Hover Effect)
+================================= */
+
+.contact-section {
+  width: 100vw;
+  padding: 60px 30px;
+  background: linear-gradient(-45deg, #003cff, #001f80, #0030aa, #002060);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Main Heading */
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(0, 60, 255, 0.7),
+               0 0 25px rgba(255, 49, 49, 0.6);
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+.contact-header p {
+  color: #ddd;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Wrapper for 2 panels */
+.contact-wrapper {
+  display: flex;
+  gap: 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Panels */
+.contact-panel {
+  flex: 1;
+  padding: 35px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+}
+
+/* === SAME HOVER EFFECT AS TESTIMONIALS === */
+.contact-panel:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: linear-gradient(90deg, #1e3a8a, #ff3131);
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.6),
+              0 0 30px rgba(255, 49, 49, 0.7);
+}
+
+/* Panel headings */
+.contact-panel h2 {
+  color: #fff;
+  font-size: 1.9rem;
+  margin-bottom: 18px;
+}
+
+.contact-tagline {
+  color: #ddd;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Info cards */
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 18px 0;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* === SAME HOVER EFFECT AS TESTIMONIALS === */
+.info-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: linear-gradient(90deg, #1e3a8a, #ff3131);
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.6),
+              0 0 30px rgba(255, 49, 49, 0.7);
+}
+
+.info-card span {
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.info-icon {
+  font-size: 1.4rem;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.info-card:hover .info-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 16px 20px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #bbb;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0, 60, 255, 0.4);
+}
+
+/* Submit button */
+.submit-btn {
+  display: inline-block;
+  padding: 16px 45px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 12px;
+    background: rgba(255, 255, 255, 0.12);
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+/* === SAME HOVER EFFECT AS TESTIMONIALS === */
+.submit-btn:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: linear-gradient(90deg, #1e3a8a, #ff3131);
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.6),
+              0 0 30px rgba(255, 49, 49, 0.7);
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 15px rgba(0, 60, 255, 0.6),
+                   0 0 30px rgba(255, 49, 49, 0.3); }
+  100% { text-shadow: 0 0 25px rgba(0, 60, 255, 1),
+                     0 0 45px rgba(255, 49, 49, 0.8); }
+}
+
+/* ===============================
+   Responsive
+=============================== */
+@media (max-width: 1200px) {
+  .contact-section { padding: 50px 25px; }
+  .contact-wrapper { width: 95%; gap: 30px; }
+  .contact-header h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 992px) {
+  .contact-wrapper { flex-direction: column; gap: 25px; width: 90%; }
+  .contact-header h1 { font-size: 2.2rem; }
+}
+
+@media (max-width: 768px) {
+  .contact-section { padding: 40px 15px; }
+  .contact-header h1 { font-size: 2rem; }
+  .contact-header p { font-size: 1.1rem; }
+  .submit-btn { width: 100%; padding: 14px 0; font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .contact-section { padding: 35px 10px; }
+  .contact-header h1 { font-size: 1.8rem; }
+  .contact-header p { font-size: 1rem; }
+}

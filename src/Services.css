@@ -1,0 +1,164 @@
+/* ===============================
+   SERVICES SECTION
+=============================== */
+.services-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: linear-gradient(-45deg, #003cff, #001f80, #0030aa, #002060);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.services-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  animation: glowPulse 2.5s infinite alternate;
+  margin-bottom: 15px;
+}
+
+.services-hero p {
+  font-size: 1.2rem;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.services-hero span {
+  color: #ff3131;
+  font-weight: 700;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Service Card */
+.service-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+  animation: slideUp 1s ease forwards;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: linear-gradient(90deg, #1e3a8a, #ff3131);
+  box-shadow: 0 12px 35px rgba(30,58,138,0.6), 0 0 30px rgba(255,49,49,0.7);
+}
+
+/* Icon */
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+/* Title & Description */
+.service-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.service-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Tech Badges */
+.service-tech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tech-badge {
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tech-badge:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #1e3a8a, #ff3131);
+  color: #fff;
+}
+
+/* Learn More Button */
+.service-btn {
+  padding: 12px 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(6px);
+}
+
+.service-btn:hover {
+  background: linear-gradient(90deg, #1e3a8a, #ff3131);
+  transform: translateY(-3px) scale(1.05);
+  text-shadow: 0 0 6px rgba(255,49,49,0.6);
+}
+
+/* ===============================
+   ANIMATIONS
+=============================== */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 15px rgba(0,60,255,0.6), 0 0 30px rgba(255,49,49,0.3); }
+  100% { text-shadow: 0 0 25px rgba(0,60,255,1), 0 0 45px rgba(255,49,49,0.8); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 15px;
+  }
+  .services-hero h1 {
+    font-size: 2.6rem;
+  }
+  .service-card {
+    padding: 30px 20px;
+  }
+  .service-desc {
+    font-size: 0.95rem;
+  }
+  .tech-badge {
+    font-size: 0.85rem;
+  }
+}
