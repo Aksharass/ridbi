@@ -1,6 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
-import './stats.css'
+import './Stats.css'
 
 const Stats = () => {
   const statsData = [
