@@ -1,6 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
-import "./stats.css";
+import './stats.css'
 
 const Stats = () => {
   const statsData = [
@@ -11,7 +11,7 @@ const Stats = () => {
   ];
 
   return (
-    <div className="stats-container">
+    <div className="stats-container ">
       {statsData.map((stat, index) => (
         <div className="stat-item" key={index}>
           <div className="stat-number">
